@@ -59,3 +59,273 @@ $(document).on("click", ".delete-btn", function() {
 
 </body>
 </html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/*1️⃣ What is jQuery?
+
+Answer:
+jQuery is a JavaScript library that makes it easier to use HTML, CSS, and JavaScript together.
+It simplifies tasks like DOM manipulation, event handling, animations, and AJAX.
+
+✅ Say:
+
+“jQuery helps write less code to do more.”
+
+2️⃣ What are the advantages of jQuery?
+
+Answer:
+
+Easy to use and learn
+
+Shorter code than JavaScript
+
+Cross-browser compatible
+
+Supports AJAX and animations
+
+3️⃣ What is the syntax of jQuery?
+
+Answer:
+Basic syntax:
+
+$(selector).action();
+
+
+✅ Example:
+
+$("#btn").click(function() {
+  alert("Button clicked!");
+});
+
+
+✅ Say:
+
+“$ is used to access elements, and we apply actions like click or hide.”
+
+4️⃣ What does $ represent in jQuery?
+
+Answer:
+$ is just an alias for jQuery, used to access jQuery functions.
+
+✅ Example:
+
+$("p").hide();
+jQuery("p").hide(); // Both same
+
+5️⃣ How do you include jQuery in an HTML file?
+
+Answer:
+
+<script src="https://code.jquery.com/jquery-3.7.0.min.js"></script>
+
+
+✅ Say:
+
+“I added jQuery through a CDN link inside the <head> or before </body>.”
+
+6️⃣ What is a jQuery selector?
+
+Answer:
+It’s used to find and work with HTML elements.
+
+✅ Examples:
+
+$("#id")     // ID selector
+$(".class")  // Class selector
+$("p")       // Tag selector
+
+7️⃣ What are jQuery events?
+
+Answer:
+Events are actions like click, hover, submit, keypress etc.
+
+✅ Example:
+
+$("#btn").click(function() {
+  alert("You clicked the button!");
+});
+
+8️⃣ What is jQuery AJAX?
+
+Answer:
+AJAX stands for Asynchronous JavaScript and XML.
+It allows web pages to send or receive data without reloading.
+
+✅ Example:
+
+$.ajax({
+  url: "data.json",
+  type: "GET",
+  success: function(result) {
+    console.log(result);
+  }
+});
+
+
+✅ Say:
+
+“I used AJAX in jQuery to simulate POST or GET requests.”
+
+9️⃣ How can you hide or show elements using jQuery?
+
+Answer:
+
+$("#box").hide();
+$("#box").show();
+$("#box").toggle();
+
+🔟 What is chaining in jQuery?
+
+Answer:
+It allows calling multiple jQuery methods together.
+
+✅ Example:
+
+$("#box").css("color", "red").slideUp(1000).slideDown(1000);
+
+
+✅ Say:
+
+“Chaining saves time by applying multiple effects in one line.”
+
+📱 B. jQuery Mobile Questions
+1️⃣ What is jQuery Mobile?
+
+Answer:
+jQuery Mobile is a touch-optimized web framework built on top of jQuery.
+It’s used to create responsive mobile websites.
+
+✅ Say:
+
+“It helps make websites look and work like mobile apps.”
+
+2️⃣ What is the main goal of jQuery Mobile?
+
+Answer:
+To build mobile-friendly, cross-platform, and responsive web apps using HTML5 + jQuery.
+
+3️⃣ How to include jQuery Mobile in your project?
+
+Answer:
+
+<link rel="stylesheet" href="https://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.css">
+<script src="https://code.jquery.com/jquery-3.7.0.min.js"></script>
+<script src="https://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.js"></script>
+
+
+✅ Say:
+
+“I added jQuery first, then the jQuery Mobile CSS and JS files.”
+
+4️⃣ What is a “page” in jQuery Mobile?
+
+Answer:
+Each page in jQuery Mobile is defined by:
+
+<div data-role="page" id="home">
+  <div data-role="header"><h1>Home</h1></div>
+  <div data-role="content">Welcome!</div>
+</div>
+
+
+✅ Say:
+
+“data-role="page" defines one mobile page or screen.”
+
+5️⃣ What are data-role attributes in jQuery Mobile?
+
+Answer:
+data-role defines the function of a page section.
+
+Attribute	Purpose
+data-role="page"	Defines a page
+data-role="header"	Defines the top bar
+data-role="content"	Main content area
+data-role="footer"	Bottom section
+6️⃣ What is a theme in jQuery Mobile?
+
+Answer:
+Themes control colors and look of buttons, headers, and pages.
+They use letters like “a”, “b”, “c”.
+
+✅ Example:
+
+<button class="ui-btn ui-btn-b">Submit</button>
+
+
+✅ Say:
+
+“I used theme ‘b’ to make my button dark.”
+
+7️⃣ How to create navigation between pages?
+
+Answer:
+
+<a href="#about" data-role="button">About</a>
+
+
+✅ Say:
+
+“We use anchor links with href="#page-id" to move between pages.”
+
+8️⃣ How to make the site responsive in jQuery Mobile?
+
+Answer:
+It’s automatically responsive — built-in CSS adapts to screen size.
+
+✅ Say:
+
+“jQuery Mobile automatically adjusts layout for phones and tablets.”
+
+9️⃣ What is the use of data-transition?
+
+Answer:
+Adds animation when switching between pages.
+
+✅ Example:
+
+<a href="#next" data-transition="slide">Next</a>
+
+
+✅ Say:
+
+“It gives smooth slide or fade effects between pages.”
+
+🔟 Advantages of jQuery Mobile
+
+Works on all devices (Android, iOS, Windows)
+
+Touch-friendly UI
+
+Responsive layout
+
+Built-in themes and transitions
+
+💬 Sample Viva Summary You Can Say:
+
+“jQuery is a JavaScript library that simplifies HTML, events, and AJAX.
+jQuery Mobile extends it to make responsive, mobile-friendly websites.
+I used data-role attributes to create pages and navigation, and jQuery selectors to handle user actions.”*/
