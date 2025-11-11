@@ -4,61 +4,83 @@
   <meta charset="utf-8">
   <title>Simple To-Do List</title>
   
-  <!-- jQuery Mobile CSS -->
+  <!-- ✅ jQuery Mobile CSS file for styling -->
   <link rel="stylesheet" href="https://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.css">
 
-  <!-- jQuery & jQuery Mobile JS -->
+  <!-- ✅ jQuery and jQuery Mobile JS files -->
   <script src="https://code.jquery.com/jquery-1.11.3.min.js"></script>
   <script src="https://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.js"></script>
 </head>
+
 <body>
 
+  <!-- ✅ jQuery Mobile "page" structure -->
   <div data-role="page" id="home">
+
+    <!-- 🔹 Header section -->
     <div data-role="header">
       <h1>My To-Do List</h1>
     </div>
 
+    <!-- 🔹 Main content section -->
     <div role="main" class="ui-content">
+
+      <!-- 📝 Form to add new tasks -->
       <form id="todoForm">
+        <!-- Input box to type a task -->
         <input type="text" id="taskInput" placeholder="Enter a task...">
+
+        <!-- Button to submit (add task) -->
         <button type="submit" class="ui-btn ui-btn-b">Add Task</button>
       </form>
 
+      <!-- 🔹 List to display added tasks -->
       <ul id="taskList" data-role="listview" data-inset="true"></ul>
     </div>
 
+    <!-- 🔹 Footer section -->
     <div data-role="footer">
       <h4>Simple jQuery Mobile App</h4>
     </div>
   </div>
 
-<script>
-    // When the form is submitted
-$("#todoForm").on("submit", function(e) {
-  e.preventDefault(); // stop page reload
+  <!-- ✅ Script section for To-Do List functionality -->
+  <script>
 
-  let task = $("#taskInput").val(); // get task text
+    // 📌 When the form is submitted
+    $("#todoForm").on("submit", function(e) {
+      e.preventDefault(); // stops page from reloading after submit
 
-  if (task) {
-    // create a new list item
-    let item = $("<li>" + task + " <button class='delete-btn'>X</button></li>");
-    
-    $("#taskList").append(item); // add to list
-    $("#taskList").listview("refresh"); // update jQuery Mobile list style
-    $("#taskInput").val(""); // clear input box
-  }
-});
+      let task = $("#taskInput").val(); // get the text entered by user
 
-// When delete button is clicked
-$(document).on("click", ".delete-btn", function() {
-  $(this).parent().remove(); // remove the list item
-  $("#taskList").listview("refresh");
-});
+      if (task) { // only run if task is not empty
+        // ✨ Create a new list item with delete button
+        let item = $("<li>" + task + " <button class='delete-btn'>X</button></li>");
+        
+        // Add the new item to the list
+        $("#taskList").append(item);
 
-</script>
+        // Refresh list style (important for jQuery Mobile)
+        $("#taskList").listview("refresh");
+
+        // Clear the input box after adding task
+        $("#taskInput").val("");
+      }
+    });
+
+    // 📌 When the delete (X) button is clicked
+    $(document).on("click", ".delete-btn", function() {
+      $(this).parent().remove(); // remove that task (its parent <li>)
+      
+      // Refresh list to update UI
+      $("#taskList").listview("refresh");
+    });
+
+  </script>
 
 </body>
 </html>
+
 
 
 
